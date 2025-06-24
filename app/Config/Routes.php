@@ -34,6 +34,6 @@ $routes->get('/usuarioData', 'Usuario_controller::usuarioData');
 /*Cambair estado de usuario*/
 $routes->get('Usuario_controller/darDeBaja/(:num)', 'Usuario_controller::darDeBaja/$1');
 $routes->get('Usuario_controller/reactivar/(:num)', 'Usuario_controller::reactivar/$1');
-
+$routes->post('Usuario_controller/guardarRol', 'Usuario_controller::guardarRol');
 /*rutas navbar <Administrador></Administrador>*/
 $routes->get('crudUsuarios', 'Usuario_Controller::index');
