@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/productos.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/politica.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/quienesSomos.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/usuarioData.css') ?>">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/favicon.ico') ?>">

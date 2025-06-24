@@ -76,6 +76,12 @@
 
     </div>
   </section>
+    <?php if (session()->get('logged_in') && session()->get('perfil_id') == 2): ?>
+        <a href="<?= base_url('/usuarioData') ?>" class="boton-flotante">
+            🧑 Mi Perfil
+        </a>
+    <?php endif; ?>
 
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </main>
