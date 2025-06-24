@@ -1,0 +1,103 @@
+/* Contenedor principal */
+.usuarioData {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Caja del formulario */
+.info-Usuario {
+  background-color: #fffdf6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Título */
+.info-Usuario h1 {
+  color: #3d3d3d;
+  font-size: 2rem;
+  border-bottom: 2px solid #b49b62;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* Estilos de formulario */
+.form-perfil label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-perfil input[type="text"],
+.form-perfil input[type="email"],
+.form-perfil input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border 0.2s ease-in-out;
+}
+
+.form-perfil input:focus {
+  border: 1px solid #b49b62;
+  outline: none;
+}
+
+/* Botón de guardar */
+.form-perfil button {
+  background-color: #b49b62;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-perfil button:hover {
+  background-color: #a6884f;
+}
+
+/* Enlace volver */
+.info-Usuario a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #3b4d2c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-Usuario a:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes de alerta */
+.alert {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.alert-info {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Errores individuales */
+.text-danger {
+  color: #d9534f;
+  font-size: 0.875rem;
+}

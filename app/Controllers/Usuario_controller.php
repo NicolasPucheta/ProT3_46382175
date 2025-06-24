@@ -29,7 +29,7 @@ class Usuario_controller extends Controller
         $data['Titulo'] = 'Registro'; 
         echo view('front/head_view', $data);
         echo view('front/navbar');
-        echo view('back/usuario/registrarse');
+        echo view('back/usuario/registrate');
         echo view('front/footer_view');
     }
 
@@ -84,6 +84,24 @@ class Usuario_controller extends Controller
         echo $data['main_content'];
         echo view('front/footer_view');
     }
+    public function guardarRol()
+    {
+        $userId = $this->request->getPost('user_id');
+        $nuevoRol = $this->request->getPost('rol');
+
+        $userModel = new Usuarios_model();
+        $data = ['perfil_id' => $nuevoRol];
+        $updated = $userModel->update($userId, $data);
+
+        if ($updated) {
+            session()->setFlashdata('success', 'Rol de usuario actualizado correctamente.');
+        } else {
+            session()->setFlashdata('error', 'Hubo un error al actualizar el rol del usuario.');
+        }
+
+        return redirect()->to('crudUsuarios');
+    }
+
     
     public function actualizarPerfil()
     {
@@ -160,5 +178,20 @@ class Usuario_controller extends Controller
             return redirect()->back()->with('mensaje', 'Error al actualizar los datos. Puede que no haya cambios o haya un problema en la base de datos.');
         }
     }
+
+    public function darDeBaja($id)
+    {
+        $model = new Usuarios_model();
+        $model->update($id, ['baja' => 'SI']);
+        return redirect()->to('crudUsuarios');
+    }
+
+    public function reactivar($id)
+    {
+        $model = new Usuarios_model();
+        $model->update($id, ['baja' => 'NO']);
+        return redirect()->to('crudUsuarios');
+    }
+
 }
     
