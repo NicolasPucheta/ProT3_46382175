@@ -84,6 +84,7 @@ class Usuario_controller extends Controller
         echo $data['main_content'];
         echo view('front/footer_view');
     }
+    
     public function guardarRol()
     {
         $userId = $this->request->getPost('user_id');
